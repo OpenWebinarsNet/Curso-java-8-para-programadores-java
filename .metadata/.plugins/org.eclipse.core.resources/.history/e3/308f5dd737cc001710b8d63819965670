@@ -1,0 +1,20 @@
+/**
+ * Ejemplo de transformación con .map(...)
+ */
+package map;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class EjemploMap {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+
+	}
+
+}

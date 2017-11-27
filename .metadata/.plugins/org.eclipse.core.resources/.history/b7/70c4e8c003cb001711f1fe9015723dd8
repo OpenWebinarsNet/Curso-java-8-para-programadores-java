@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package lectura;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class C_ApiStream {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		
+		
+
+	}
+
+}

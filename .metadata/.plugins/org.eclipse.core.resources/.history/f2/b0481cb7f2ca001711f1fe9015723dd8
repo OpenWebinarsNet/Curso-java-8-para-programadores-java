@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package trywithresources;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class App {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		try (BufferedReader br = new BufferedReader(new FileReader("files\\quijote.txt"))) {
+			
+			
+			
+		} catch (IOException ex) {
+			System.err.println("Error de entrada salida: " + ex.getMessage());
+		}
+		
+
+	}
+
+}

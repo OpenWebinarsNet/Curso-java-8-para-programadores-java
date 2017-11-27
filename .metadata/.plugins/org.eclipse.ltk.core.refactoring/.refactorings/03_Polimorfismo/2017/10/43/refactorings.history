@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;08_Final/src/ejemplofinal&apos;&#x0D;&#x0A;- Original project: &apos;03_Polimorfismo&apos;&#x0D;&#x0A;- Destination element: &apos;08_Final/src/ejemplofinal&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     polimorfismo.EjemploFiguras.java&#x0D;&#x0A;     polimorfismo.Cuadrado.java&#x0D;&#x0A;     polimorfismo.Rectangulo.java" description="Copy compilation units" destination="=08_Final/src&lt;ejemplofinal" element1="/src&lt;polimorfismo{EjemploFiguras.java" element2="/src&lt;polimorfismo{Cuadrado.java" element3="/src&lt;polimorfismo{Rectangulo.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1509187372309" units="3" version="1.0"/>
+</session>

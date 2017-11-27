@@ -1,0 +1,69 @@
+package model;
+
+import java.util.Optional;
+
+public class Libro {
+	
+	private String titulo;
+	private Optional<Autor> autor;
+	private String anioPublicacion;
+	private String isbn;
+	
+	public Libro() { }
+	
+
+	public Libro(String titulo, Optional<Autor> autor, String anioPublicacion, String isbn) {
+		this.titulo = titulo;
+		this.autor = autor;
+		this.anioPublicacion = anioPublicacion;
+		this.isbn = isbn;
+	}
+
+
+	public Optional<Autor> getAutor() {
+		return autor;
+	}
+
+	public void setAutor(Optional<Autor> autor) {
+		this.autor = autor;
+	}
+
+	public String getAnioPublicacion() {
+		return anioPublicacion;
+	}
+
+	public void setAnioPublicacion(String anioPublicacion) {
+		this.anioPublicacion = anioPublicacion;
+	}
+
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+	
+	
+	public String getTitulo() {
+		return titulo;
+	}
+
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Libro [titulo=" + titulo + ", autor=" + autor + ", anioPublicacion=" + anioPublicacion + ", isbn="
+				+ isbn + "]";
+	}
+
+
+	
+	
+	
+}

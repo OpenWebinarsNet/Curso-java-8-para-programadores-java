@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+org.eclipse.debug.core.USE_STEP_FILTERS=true
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="p"/>\r\n<expression enabled\="true" text\="Files.readAllLines(Paths.get(&quot;files\\quijote.txt&quot;))"/>\r\n</watchExpressions>\r\n

@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package lectura;
+
+import java.nio.file.Files;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class A_FicheroTexto {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		
+		Files.readAllLines(path)
+		
+
+	}
+
+}

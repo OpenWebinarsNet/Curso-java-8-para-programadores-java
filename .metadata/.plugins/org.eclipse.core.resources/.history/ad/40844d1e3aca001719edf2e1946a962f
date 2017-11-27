@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package io;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
+
+import model.RegistroDatos;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class MeteoReader {
+	
+	public static Optional<List<RegistroDatos>> readDataOfPath(Path p) throws IOException {
+		
+		if (Files.exists(p)) {
+			
+			try (Stream<String> stream = Files.lines(p)) {
+			    stream
+			        .filter(line -> line.contains("print"))
+			        .map(String::trim)
+			        .forEach(System.out::println);
+			} catch (IOException | FileNotFoundException ex) {
+				System.out.println();
+			}
+			
+			
+		} else {
+			return Optional.empty();
+		}
+		
+	}
+
+}

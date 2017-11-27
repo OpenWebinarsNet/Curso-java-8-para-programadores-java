@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package colectores;
+
+import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class A_Basicos {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		Random r = new Random();
+		List<Integer> numeros =  r.ints(0, 1000).limit(20).boxed().collect(Collectors.toList());
+		
+
+	}
+
+}

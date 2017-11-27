@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package collectors;
+
+import java.util.List;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class EjemplosCollectors {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		List<Integer> numeros = Random
+
+	}
+
+}

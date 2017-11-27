@@ -1,0 +1,15 @@
+package filter;
+
+import java.time.LocalDate;
+
+public class Persona {
+	
+	private String nombre;
+	private LocalDate fechaNacimiento;
+	
+	public Persona() { }
+	
+	
+	
+
+}

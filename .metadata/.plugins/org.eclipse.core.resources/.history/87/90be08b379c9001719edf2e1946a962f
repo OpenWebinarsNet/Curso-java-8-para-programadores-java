@@ -1,0 +1,55 @@
+package service;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import model.RegistroDatos;
+import model.TemperaturaHora;
+
+public class ServicioClimatologia {
+
+	List<RegistroDatos> datos;
+
+	public ServicioClimatologia(List<RegistroDatos> datos) {
+		this.datos = datos;
+	}
+
+	public Map<String, Optional<TemperaturaHora>> temperaturaMaximaProvincias() {
+
+		return datos.stream()
+				.collect(Collectors.groupingBy(RegistroDatos::getProvincia, Collectors.mapping(RegistroDatos::getMaxima,
+						Collectors.maxBy((m1, m2) -> Float.compare(m1.getTemperatura(), m2.getTemperatura())))));
+
+	}
+
+	public Map<String, Optional<TemperaturaHora>> temperaturaMinimaProvincias() {
+		return datos.stream()
+				.collect(Collectors.groupingBy(RegistroDatos::getProvincia, Collectors.mapping(RegistroDatos::getMaxima,
+						Collectors.minBy((m1, m2) -> Float.compare(m1.getTemperatura(), m2.getTemperatura())))));
+
+	}
+
+	public void temperaturaMediaProvincias() {
+
+		//return 
+				datos.stream()
+				.collect(Collectors.toMap(Function.identity(),
+//						(RegistroDatos r) -> Stream.of(r.getMaxima().getTemperatura(), r.getMinima().getTemperatura())
+//							.mapToDouble(Function.identity()).average().getAsDouble()))
+						(t1, t2) -> (t1.getMaxima().getTemperatura() + t2.getMaxima().getTemperatura())/2))
+				.entrySet()
+				.stream()
+				.collect(Collectors.groupingBy(RegistroDatos::getProvincia, Collectors.averagingDouble(entry -> entry.getValue())));
+
+	}
+
+	public List<RegistroDatos> datosProvincia(String provincia) {
+
+		return datos.stream().filter(p -> p.getProvincia().equalsIgnoreCase(provincia)).collect(Collectors.toList());
+	}
+
+}

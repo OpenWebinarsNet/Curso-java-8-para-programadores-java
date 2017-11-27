@@ -1,0 +1,19 @@
+package model;
+
+import java.time.LocalDate;
+
+public class RegistroDatos {
+	
+	private LocalDate fecha;
+	private String estacionMeteorologica;
+	private String provincia;
+	private TemperaturaHora maxima;
+	private TemperaturaHora minima;
+	private float precipitacion;
+	
+	public RegistroDatos() { }
+	
+	
+	
+
+}

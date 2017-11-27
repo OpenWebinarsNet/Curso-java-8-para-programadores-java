@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type variable &apos;V&apos; of &apos;ejemplobasico.Par&apos; to &apos;S&apos;&#x0D;&#x0A;- Original project: &apos;11_Genericas&apos;&#x0D;&#x0A;- Original element: &apos;V&apos;&#x0D;&#x0A;- Renamed element: &apos;S&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename type variable &apos;V&apos;" id="org.eclipse.jdt.ui.rename.type.parameter" input="/src&lt;ejemplobasico{Par.java[Par" name="S" parameter="V" references="true" stamp="1509211907397" version="1.0"/>
+</session>

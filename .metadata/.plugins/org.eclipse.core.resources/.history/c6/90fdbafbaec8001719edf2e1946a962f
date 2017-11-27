@@ -1,0 +1,14 @@
+package model;
+
+import java.time.LocalTime;
+
+public class TemperaturaHora {
+	
+	private float temperatura;
+	private LocalTime hora;
+	
+	public TemperaturaHora() { }
+	
+	
+
+}

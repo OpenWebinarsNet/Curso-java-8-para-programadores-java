@@ -1,0 +1,12 @@
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class RegistroDatos {
+	
+	private LocalDate fecha;
+	private String estacionMeteorologica;
+	private String provincia;
+	private float temperaturaMaxima;
+	private LocalTime horaTemperaturaMaxima;
+
+}

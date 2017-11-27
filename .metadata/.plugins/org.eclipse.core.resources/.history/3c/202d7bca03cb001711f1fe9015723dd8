@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package lectura;
+
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class C_ApiStream {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		
+		Files.lines(Paths.get("files", "quijote.txt"), Charset.forName("Cp1252"))
+			.filter(s -> !s.isEmpty())
+			.forEach(System.out::println);
+
+	}
+
+}

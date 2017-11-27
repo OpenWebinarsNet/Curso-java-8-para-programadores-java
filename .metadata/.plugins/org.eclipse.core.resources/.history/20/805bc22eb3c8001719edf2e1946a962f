@@ -1,0 +1,26 @@
+/**
+ * Clase que simula la extracción de un gran volumen de datos de un origen (por ejemplo, un API Rest)
+ */
+package app;
+
+import java.util.Arrays;
+import java.util.List;
+
+import model.RegistroDatos;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class Init {
+	
+	
+	public static List<RegistroDatos> getAll() {
+		return Arrays.asList(
+				
+				
+				
+				);
+	}
+
+}

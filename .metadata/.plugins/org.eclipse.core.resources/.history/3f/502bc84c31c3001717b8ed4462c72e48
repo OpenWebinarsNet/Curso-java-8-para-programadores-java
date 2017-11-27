@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package apistream;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class EjemploBusqueda {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

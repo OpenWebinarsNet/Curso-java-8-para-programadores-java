@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+package lectura;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class A_FicheroTexto {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		
+		try {
+			Path p = Paths.get("files", "quijote.txt").normalize();
+			for (String s : Files.readAllLines(p)) {
+				System.out.println(s);
+			}
+		} catch (IOException e) {
+			System.err.println("Error de lectura de fichero");
+			System.err.println(e.getMessage());
+		}
+		
+
+	}
+
+}

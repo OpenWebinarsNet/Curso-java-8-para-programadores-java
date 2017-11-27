@@ -1,0 +1,13 @@
+package referencias;
+
+public class ComparadorPersonas {
+	
+	public int compararPorNombre(Persona a, Persona b) {
+        return a.getNombre().compareTo(b.getNombre());
+    }
+        
+    public int compareByAge(Person a, Person b) {
+        return a.getBirthday().compareTo(b.getBirthday());
+    }
+
+}

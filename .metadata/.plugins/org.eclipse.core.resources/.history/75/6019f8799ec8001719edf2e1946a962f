@@ -1,0 +1,10 @@
+package filter;
+
+public class Persona {
+	
+	private String nombre;
+	private LocalDate fechaNacimiento;
+	
+	
+
+}

@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package colectores;
+
+import java.util.IntSummaryStatistics;
+import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class A_Basicos {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		Random r = new Random();
+		List<Integer> numeros =  r.ints(0, 1000).limit(20).boxed().collect(Collectors.toList());
+		
+		
+		IntSummaryStatistics res = numeros.stream().collect(Collectors.summarizingInt(Integer::intValue));
+		
+		System.out.println("Algunos datos sobre los números procesados");
+		System.out.println("Máximo: " + res.getMax());
+		System.out.println("Mínimo: " + res.getMin());
+		System.out.println("Media: " + res.getAverage());
+		System.out.println("Suma: " + res.getSum());
+		System.out.println("Número de elementos: " + res.getCount());
+		
+
+	}
+
+}

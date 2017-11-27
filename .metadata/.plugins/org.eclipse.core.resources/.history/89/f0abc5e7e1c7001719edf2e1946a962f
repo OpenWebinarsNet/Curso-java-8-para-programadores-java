@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package collectors;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class B_GroupBy {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+
+	}
+
+}

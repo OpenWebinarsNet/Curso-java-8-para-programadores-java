@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package map;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class Persona {
+	
+	private String nombre;
+	private String apellidos;
+	private LocalDate fechaNacimiento;
+	
+	
+
+	
+	
+	
+
+}

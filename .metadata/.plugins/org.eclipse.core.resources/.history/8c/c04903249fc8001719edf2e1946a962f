@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package filter;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class StreamFilter {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		
+		
+		
+	}
+
+}

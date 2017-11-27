@@ -1,0 +1,66 @@
+/**
+ * 
+ */
+package collectors;
+
+import static java.util.stream.Collectors.counting;
+import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.joining;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map; 
+
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class B_GroupBy {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		List<Empleado> empleados = Arrays.asList(
+				new Empleado("Pepe", 30000, "Ventas"),
+				new Empleado("Juan", 31000, "Ventas"),
+				new Empleado("Antonio", 30000, "Compras"),
+				new Empleado("María", 30000, "Compras"),
+				new Empleado("Manuela", 34000, "Ejecutivo")				
+				);
+		
+		Map<String, List<Empleado>> porDepartamento = 
+				empleados
+					.stream()
+					.collect(groupingBy(Empleado::getDepartamento));
+		
+		porDepartamento.forEach((k, v) -> {
+			String strEmpleados = v.stream().map(e -> e.getNombre()).collect(joining(", "));
+			System.out.printf("Departamento: %s | Empleados: %s %n", k, strEmpleados );
+		});
+		
+		// Se puede agrupar con otro collector, para obtener un valor en lugar de 
+		// otra coleccion
+		Map<String, Long> porDepartamentoCantidad = 
+				empleados
+					.stream()
+					.collect(groupingBy(Empleado::getDepartamento, counting()));
+		
+		porDepartamentoCantidad.forEach((k, v) -> System.out.printf("%s (%d empleados) %n", k, v));
+		
+		// Podemos añadir dos niveles de agrupamiento
+		Map<String, Map<Double, List<Empleado>>> porDepartamentoYSalario = 
+				empleados
+					.stream()
+					.collect(groupingBy(Empleado::getDepartamento, groupingBy(Empleado::getSalario)));
+		
+		porDepartamentoYSalario.forEach((k, v) -> {
+			
+		});
+		
+
+	}
+
+}

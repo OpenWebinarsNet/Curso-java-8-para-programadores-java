@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package io;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class MeteoReader {
+
+}

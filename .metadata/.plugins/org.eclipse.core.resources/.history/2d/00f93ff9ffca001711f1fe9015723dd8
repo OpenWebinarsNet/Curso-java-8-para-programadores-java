@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package optional;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import model.Persona;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class App {
+
+	/**
+	 * @param args
+	 */
+
+	static List<Persona> lista;
+
+	public static void main(String[] args) {
+
+	}
+
+	public static void initData() {
+
+		lista = Arrays.asList(new Persona("María"), new Persona("Alberto"), new Persona("Juan"), new Persona("Luisa"),
+				new Persona("Miguel"));
+
+	}
+
+	public static Optional<Persona> find(String nombre) {
+
+		lista.stream().filter((n) -> n.getNombre().equalsIgnoreCase(nombre)).findFirst();
+		
+		
+	}
+
+}

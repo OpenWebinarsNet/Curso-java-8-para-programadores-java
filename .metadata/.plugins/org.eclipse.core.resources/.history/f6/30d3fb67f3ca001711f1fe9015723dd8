@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package classictrycatch;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class App {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		BufferedReader br = null;
+		
+		try {
+			br = new BufferedReader(new FileReader("files\\quijote.txt"));
+			String linea;
+			
+			while ((linea = br.readLine()) != null) {
+				System.out.println(linea);
+			}
+			
+			
+		} catch (IOException ex) {
+			
+		} finally {
+			try {
+				br.close();
+			} catch (IOException ex) {
+				System.err.println("Error de entrada salida: " + ex.getMessage());
+			}
+		}
+		
+
+	}
+
+}

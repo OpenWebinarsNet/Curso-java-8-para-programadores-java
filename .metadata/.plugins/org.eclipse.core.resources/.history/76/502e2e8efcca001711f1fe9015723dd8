@@ -1,0 +1,60 @@
+/**
+ * 
+ */
+package model;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class App {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		// Si intentamos listar los ISBN de los libros de nuestra biblioteca...
+		
+		List<Libro> biblioteca = initData();
+		
+		biblioteca.stream()
+			.map(libro -> libro.getIsbn())
+			.forEach(System.out::println);
+		
+		// Y si tratamos de listar los nombres de los autores y su fecha de nacimiento...
+		
+		biblioteca
+			.stream()
+			.map(l -> Optional.ofNullable(l.getAutor()))
+			.map(a -> String.format("%s (%s)", a.getNombre(), a.getFechaNacimiento().format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT))))
+			.forEach(System.out::println);
+		
+		
+		
+
+	}
+	
+	public static List<Libro> initData() {
+		
+		Autor kenFollet = new Autor("Ken Follet", LocalDate.of(1949, 6, 5));
+		Autor homero = new Autor("Homero", null);
+		
+		return Arrays.asList(
+				new Libro("Los Pilares de la Tierra", kenFollet, "1989", "9788401328510"),
+				new Libro("Un mundo sin fin", kenFollet, "2007", "9788401019609"),
+				new Libro("La Odisea", homero, null, null),
+				new Libro("La Iliada", homero, null, null),
+				new Libro("Cantar del Mío Cid", null, null, null)
+				);
+		
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;bytes.fileinput.EjemploFileOutputStream&apos; to &apos;EjemploFileInputStream&apos;&#x0D;&#x0A;- Original project: &apos;24_FlujosEntrada&apos;&#x0D;&#x0A;- Original element: &apos;bytes.fileinput.EjemploFileOutputStream&apos;&#x0D;&#x0A;- Renamed element: &apos;bytes.fileinput.EjemploFileInputStream&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;EjemploFileOutputStream&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;bytes.fileinput{EjemploFileOutputStream.java[EjemploFileOutputStream" matchStrategy="1" name="EjemploFileInputStream" qualified="false" references="true" similarDeclarations="false" stamp="1509556183245" textual="false" version="1.0"/>
+</session>

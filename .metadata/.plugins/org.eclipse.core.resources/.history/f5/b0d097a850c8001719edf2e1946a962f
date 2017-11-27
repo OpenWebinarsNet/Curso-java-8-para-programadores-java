@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package collectors;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class C_Colecciones {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

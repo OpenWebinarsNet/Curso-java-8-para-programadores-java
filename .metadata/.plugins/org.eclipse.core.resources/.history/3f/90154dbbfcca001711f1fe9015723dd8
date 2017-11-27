@@ -1,0 +1,42 @@
+package model;
+
+import java.time.LocalDate;
+
+public class Autor {
+	
+	private String nombre;
+	private LocalDate fechaNacimiento;
+	
+	public Autor() { }
+
+	public Autor(String nombre, LocalDate fechaNacimiento) {
+		this.nombre = nombre;
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public LocalDate getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	public void setFechaNacimiento(LocalDate fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	@Override
+	public String toString() {
+		return "Autor [nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + "]";
+	}
+	
+	
+	
+	
+
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/28bis_ServicioMeteorologico2/src/app/App.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="app.App"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="29-10-2017 files/Aemet20171029.csv 30-10-2017 files/Aemet20171030.csv 31-10-2017 files/Aemet20171031.csv"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="28bis_ServicioMeteorologico2"/>
+</launchConfiguration>

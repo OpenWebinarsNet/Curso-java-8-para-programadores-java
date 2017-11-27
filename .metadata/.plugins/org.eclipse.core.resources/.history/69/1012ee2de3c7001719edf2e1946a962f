@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package collectors;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import static java.util.stream.Collectors.*; 
+
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class B_GroupBy {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		List<Empleado> empleados = Arrays.asList(
+				new Empleado("Pepe", 30000, "Ventas"),
+				new Empleado("Juan", 31000, "Ventas"),
+				new Empleado("Antonio", 32000, "Compras"),
+				new Empleado("María", 33000, "Compras"),
+				new Empleado("Manuela", 34000, "Ejecutivo")				
+				);
+		
+		Map<String, List<Empleado>> porDepartamento = 
+				empleados
+					.stream()
+					.collect(groupingBy(Empleado::getDepartamento));
+		
+		Map<String, Long> porDepartamentoCantidad = 
+				empleados
+					.stream()
+					.collect(groupingBy(Empleado::getDepartamento, counting()));
+		
+
+	}
+
+}

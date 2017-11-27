@@ -1,0 +1,8 @@
+package referencias;
+
+public class Persona {
+	
+	private String nombre;
+	private LocalDate fechaNacimiento;
+
+}

@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package collectors;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class EjemplosCollectors {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

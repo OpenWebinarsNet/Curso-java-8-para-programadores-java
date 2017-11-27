@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;23_FlujosSalida&apos;&#x0D;&#x0A;- Original project: &apos;23_FlujosSalida&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     buffered.dat&#x0D;&#x0A;     introquijote.txt&#x0D;&#x0A;     primero.dat&#x0D;&#x0A;     quijote.txt" description="Delete elements" element1="buffered.dat" element2="quijote.txt" element3="introquijote.txt" element4="primero.dat" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="4" stamp="1511002643527" subPackages="false" version="1.0"/>
+</session>

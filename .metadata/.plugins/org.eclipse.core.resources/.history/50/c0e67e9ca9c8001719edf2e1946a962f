@@ -1,0 +1,15 @@
+package referencias;
+
+public class Estudiante {
+	
+	private String nombre;
+	
+	public Estudiante() { };
+	
+	public Estudiante(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	
+
+}

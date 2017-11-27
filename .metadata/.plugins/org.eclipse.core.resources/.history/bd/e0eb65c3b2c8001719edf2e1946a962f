@@ -1,0 +1,12 @@
+/**
+ * Clase que simula la extracción de un gran volumen de datos de un origen (por ejemplo, un API Rest)
+ */
+package app;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class Init {
+
+}

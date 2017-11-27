@@ -1,0 +1,12 @@
+package model;
+
+public class Libro {
+	
+	private Autor autor;
+	private String anioPublicacion;
+	private String isbn;
+	
+	public Libro() { }
+	
+	
+}

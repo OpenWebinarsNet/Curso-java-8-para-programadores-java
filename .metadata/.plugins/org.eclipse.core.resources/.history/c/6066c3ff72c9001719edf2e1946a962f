@@ -1,0 +1,80 @@
+/**
+ * 
+ */
+package app;
+
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+import model.RegistroDatos;
+import model.TemperaturaHora;
+import service.ServicioClimatologia;
+import util.PrintUtil;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class App {
+	
+	static ServicioClimatologia servicio;
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		// Recogemos los datos e iniciamos el servicio
+		servicio = new ServicioClimatologia(Init.getAll());
+		
+		imprimirInformeMeteorologico();
+
+	}
+
+	private static void imprimirInformeMeteorologico() {
+		
+		maximaPorProvincias();
+		minimaPorProvincias();
+		
+		datosPorProvincia("SEVILLA");
+		
+	}
+
+	private static void maximaPorProvincias() {
+		System.out.println("TEMPERATURA MÁXIMA POR PROVINCIAS");
+		System.out.println("-----------------------------------------------------");
+		Map<String, Optional<TemperaturaHora>> maximas = servicio.temperaturaMaximaProvincia();
+		
+		PrintUtil.printMapProvinciaTemperaturaHora(maximas);
+	}
+	
+	private static void minimaPorProvincias() {
+		System.out.println("TEMPERATURA MÍNIMA POR PROVINCIAS");
+		System.out.println("-----------------------------------------------------");
+		Map<String, Optional<TemperaturaHora>> minimas = servicio.temperaturaMinimaProvincia();
+		
+		PrintUtil.printMapProvinciaTemperaturaHora(minimas);
+			
+	}
+	
+	private static void datosPorProvincia(String provincia) {
+		System.out.println("DATOS DE LA PROVINCIA DE " + provincia.toUpperCase());
+		System.out.println("-----------------------------------------------------");
+		
+		List<RegistroDatos> datos = servicio.datosProvincia(provincia);
+		datos
+			.stream()
+			.sorted(Comparator.comparing(RegistroDatos::getEstacionMeteorologica))
+			.forEach(r -> System.out.printf("Estación meteorológica: %s | Máxima: %.2f (%s) | Mínima: %.2f (%s) | Precipitación: %.2f", 
+					r.getEstacionMeteorologica(), r.getMaxima().getTemperatura(), r.getMaxima().getHora(),
+					r.getMinima().getTemperatura(), r.getMinima().getTemperatura(), r.getPrecipitacion()) );
+		
+		
+
+	}
+	
+	
+
+}

@@ -1,0 +1,55 @@
+package model;
+
+public class Libro {
+	
+	private String titulo;
+	private Autor autor;
+	private String anioPublicacion;
+	private String isbn;
+	
+	public Libro() { }
+	
+
+	public Libro(String titulo, Autor autor, String anioPublicacion, String isbn) {
+		this.titulo = titulo;
+		this.autor = autor;
+		this.anioPublicacion = anioPublicacion;
+		this.isbn = isbn;
+	}
+
+
+	public Autor getAutor() {
+		return autor;
+	}
+
+	public void setAutor(Autor autor) {
+		this.autor = autor;
+	}
+
+	public String getAnioPublicacion() {
+		return anioPublicacion;
+	}
+
+	public void setAnioPublicacion(String anioPublicacion) {
+		this.anioPublicacion = anioPublicacion;
+	}
+
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+	
+	
+	@Override
+	public String toString() {
+		return "Libro [autor=" + autor + ", anioPublicacion=" + anioPublicacion + ", isbn=" + isbn + "]";
+	}
+	
+	
+	
+	
+}

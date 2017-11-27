@@ -1,0 +1,25 @@
+/**
+ * Programa que hace una "rápida copia" de otro fichero
+ */
+package lectura;
+
+import java.nio.file.Files;
+
+/**
+ * @author Openwebinars
+ *
+ */
+public class B_FicheroBinario {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		
+		Files.readAllBytes(path);
+		Files.write
+
+	}
+
+}
